@@ -10,9 +10,9 @@ class BulkDeleteTags(AddOn):
     def main(self):
         """The main add-on functionality goes here."""
         # fetch your add-on specific data
-        key = self.data.get("key")
+        del_key = self.data.get("del_key")
         for document in self.get_documents():
-            document.data.pop(key)
+            document.data.pop(del_key)
             document.save()
 
 if __name__ == "__main__":
