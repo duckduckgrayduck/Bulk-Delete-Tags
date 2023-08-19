@@ -16,7 +16,7 @@ class BulkDeleteTags(AddOn):
             if del_key in document.data:
                 del document.data[del_key]
                 print(document.data)
-                document.save()
+                document.data.put()
 
 if __name__ == "__main__":
     BulkDeleteTags().main()
