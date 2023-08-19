@@ -12,8 +12,9 @@ class BulkDeleteTags(AddOn):
         # fetch your add-on specific data
         del_key = self.data.get("del_key")
         for document in self.get_documents():
-            document.data.pop(del_key)
-            document.save()
+            if del_key in document.data:
+                document.data.pop(del_key)
+                document.save()
 
 if __name__ == "__main__":
     BulkDeleteTags().main()
