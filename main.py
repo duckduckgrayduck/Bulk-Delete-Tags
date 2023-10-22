@@ -11,9 +11,9 @@ class BulkDeleteTags(AddOn):
         """The main add-on functionality goes here."""
         # fetch your add-on specific data
         del_key = self.data.get("del_key")
-        if not self.documents:
+        """ if not self.documents:
             self.set_message("Please select at least one document.")
-            return
+            return """
         for document in self.get_documents():
             print(document.data)
             if del_key in document.data:
