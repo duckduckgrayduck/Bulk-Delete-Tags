@@ -3,8 +3,8 @@ description: This Add-On allows you to clear a tag or key/value pair from a set 
 instructions: ''
 type: object
 documents:
-  - query
   - selected
+  - query
 properties:
   del_key:
     title: Key name of metadata you want to remove. 
